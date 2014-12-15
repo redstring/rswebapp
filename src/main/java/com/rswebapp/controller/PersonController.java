@@ -1,7 +1,5 @@
 package com.rswebapp.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +19,7 @@ public class PersonController {
 
 	//Testing URL: /mobile/person?username=peter
 	//This is more like traditional php style, use this styple
-	@RequestMapping(value="/mobile/person", method = RequestMethod.GET)
+	@RequestMapping(value="/api_v1/person", method = RequestMethod.GET)
 	public ModelAndView findPersonByName(
 			@RequestParam("username") String username) {
 		
@@ -42,7 +40,7 @@ public class PersonController {
 	}
 	
 	//This is more like REST style
-	@RequestMapping(value="/mobile/person/{username}", method = RequestMethod.GET)
+	@RequestMapping(value="/api_v1/person/{username}", method = RequestMethod.GET)
 	public ModelAndView findDepatmentAlternative(
 	  @PathVariable("username") String username){
 		
