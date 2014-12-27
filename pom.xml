@@ -93,8 +93,6 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-
-
 		<!-- It's used when you run web server inside Eclipse -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

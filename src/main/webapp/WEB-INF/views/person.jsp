@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="../index.jsp">Click here to See Welcome Message... </a>
+<a href="/rswebapp/index.jsp">Click here to See Welcome Message... </a>
 
 <br/><br/>
 

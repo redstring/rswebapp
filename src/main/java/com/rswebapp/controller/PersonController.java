@@ -19,7 +19,7 @@ public class PersonController {
 
 	//Testing URL: /mobile/person?username=peter
 	//This is more like traditional php style, use this styple
-	@RequestMapping(value="/api_v1/person", method = RequestMethod.GET)
+	@RequestMapping(value="/v1/person", method = RequestMethod.GET)
 	public ModelAndView findPersonByName(
 			@RequestParam("username") String username) {
 		
@@ -40,7 +40,7 @@ public class PersonController {
 	}
 	
 	//This is more like REST style
-	@RequestMapping(value="/api_v1/person/{username}", method = RequestMethod.GET)
+	@RequestMapping(value="/v1/person/{username}", method = RequestMethod.GET)
 	public ModelAndView findDepatmentAlternative(
 	  @PathVariable("username") String username){
 		
