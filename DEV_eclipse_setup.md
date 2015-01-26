@@ -51,22 +51,33 @@ Right click project(rswebapp) -> Properties ->
   
   Click Further configuration available -> Content directory set to "src/main/webapp"
 
-####Step 6: 
-Right click project (rswebapp) -> Configure -> Convert to maven project
 
 * * *
-####Step 7: 
+####Step 6: 
 (Optional): Right click project (rswebapp) -> Properties -> Deployement Assembly -> add -> click on "Java Build Path Entries" ->
 
 select "Maven Dependencies"  ->click Finish.
 * * *
 
-##Local test run (Without installing Tomcat)
-Requires JDK7, maven 3
+##Local test run method (Without installing Tomcat)
+Requires JDK8, maven 3
 ```bash
-$ mvn jetty:run
+$ mvn package
+$ ./run.sh
 ```
+
 Open browser, and type in the url
 
-http://localhost:8080/index.jsp
+http://localhost:8080
 
+##hsqldb in local dev environment, go into hsqldb folder
+```bash
+#start_hsqldb
+$ ./start_db1.sh
+#stop_hsqldb
+$ ./stop_db1.sh
+#check if hsqldb is running
+$ ./check_hsqldb_status.sh
+#connect to hsqldb to run some sql
+$ ./connect_hsqldb_cml.sh
+```
