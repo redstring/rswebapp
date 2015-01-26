@@ -26,18 +26,15 @@
         <p>
         <img src="images/RedString1024.png"/>
         </p>
-      </div>
+      </div >
 
       <div class="row marketing">
         <div class="col-lg-6">
-          <h4></h4>
-          <p><a href="api/v1/person?username=peter">person-peter</a></p>
-
-          <h4></h4>
-          <p><a href="api/v1/person/nasta">person-nasta</a></p>
-
-          <h4></h4>
-          <p></p>
+        
+        <h4></h4>
+          <p><a href="api">api-home</a></p>
+        <h4></h4>
+          
         </div>
 
         <div class="col-lg-6">

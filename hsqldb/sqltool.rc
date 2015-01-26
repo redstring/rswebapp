@@ -1,0 +1,5 @@
+# A personal, local, persistent database 
+urlid localdb1
+url jdbc:hsqldb:hsql://localhost/db1;shutdown=true
+username sa
+password

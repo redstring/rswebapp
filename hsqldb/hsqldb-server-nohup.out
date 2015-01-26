@@ -1,0 +1,75 @@
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@372f7a8d]: Startup sequence initiated from main() method
+[Server@372f7a8d]: Could not load properties from file
+[Server@372f7a8d]: Using cli/default properties only
+[Server@372f7a8d]: Initiating startup sequence...
+[Server@372f7a8d]: Server socket opened successfully in 6 ms.
+[Server@372f7a8d]: Database [index=0, id=0, db=file:hsqldb-file, alias=db1] opened sucessfully in 1082 ms.
+[Server@372f7a8d]: Startup sequence completed in 1094 ms.
+[Server@372f7a8d]: 2015-01-26 09:11:05.239 HSQLDB server 2.3.2 is online on port 9001
+[Server@372f7a8d]: To close normally, connect and execute SHUTDOWN SQL
+[Server@372f7a8d]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@372f7a8d]: Initiating shutdown sequence...
+[Server@372f7a8d]: Shutdown sequence completed in 103 ms.
+[Server@372f7a8d]: 2015-01-26 09:11:16.060 SHUTDOWN : System.exit() is called next
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@372f7a8d]: Startup sequence initiated from main() method
+[Server@372f7a8d]: Could not load properties from file
+[Server@372f7a8d]: Using cli/default properties only
+[Server@372f7a8d]: Initiating startup sequence...
+[Server@372f7a8d]: Server socket opened successfully in 6 ms.
+[Server@372f7a8d]: Database [index=0, id=0, db=file:hsqldb-file, alias=db1] opened sucessfully in 662 ms.
+[Server@372f7a8d]: Startup sequence completed in 672 ms.
+[Server@372f7a8d]: 2015-01-26 09:11:24.422 HSQLDB server 2.3.2 is online on port 9001
+[Server@372f7a8d]: To close normally, connect and execute SHUTDOWN SQL
+[Server@372f7a8d]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@372f7a8d]: Initiating shutdown sequence...
+[Server@372f7a8d]: Shutdown sequence completed in 115 ms.
+[Server@372f7a8d]: 2015-01-26 09:12:09.334 SHUTDOWN : System.exit() is called next
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@372f7a8d]: Startup sequence initiated from main() method
+[Server@372f7a8d]: Could not load properties from file
+[Server@372f7a8d]: Using cli/default properties only
+[Server@372f7a8d]: Initiating startup sequence...
+[Server@372f7a8d]: Server socket opened successfully in 6 ms.
+[Server@372f7a8d]: Database [index=0, id=0, db=file:hsqldb-file, alias=db1] opened sucessfully in 1201 ms.
+[Server@372f7a8d]: Startup sequence completed in 1212 ms.
+[Server@372f7a8d]: 2015-01-26 09:21:37.883 HSQLDB server 2.3.2 is online on port 9001
+[Server@372f7a8d]: To close normally, connect and execute SHUTDOWN SQL
+[Server@372f7a8d]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@372f7a8d]: Initiating shutdown sequence...
+[Server@372f7a8d]: Shutdown sequence completed in 102 ms.
+[Server@372f7a8d]: 2015-01-26 09:23:24.035 SHUTDOWN : System.exit() is called next
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@372f7a8d]: Startup sequence initiated from main() method
+[Server@372f7a8d]: Could not load properties from file
+[Server@372f7a8d]: Using cli/default properties only
+[Server@372f7a8d]: Initiating startup sequence...
+[Server@372f7a8d]: Server socket opened successfully in 5 ms.
+[Server@372f7a8d]: Database [index=0, id=0, db=file:hsqldb-file, alias=db1] opened sucessfully in 691 ms.
+[Server@372f7a8d]: Startup sequence completed in 700 ms.
+[Server@372f7a8d]: 2015-01-26 09:25:02.292 HSQLDB server 2.3.2 is online on port 9001
+[Server@372f7a8d]: To close normally, connect and execute SHUTDOWN SQL
+[Server@372f7a8d]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@372f7a8d]: Initiating shutdown sequence...
+[Server@372f7a8d]: Shutdown sequence completed in 111 ms.
+[Server@372f7a8d]: 2015-01-26 09:47:17.809 SHUTDOWN : System.exit() is called next
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) entered
+[Server@372f7a8d]: [Thread[main,5,main]]: checkRunning(false) exited
+[Server@372f7a8d]: Startup sequence initiated from main() method
+[Server@372f7a8d]: Could not load properties from file
+[Server@372f7a8d]: Using cli/default properties only
+[Server@372f7a8d]: Initiating startup sequence...
+[Server@372f7a8d]: Server socket opened successfully in 6 ms.
+[Server@372f7a8d]: Database [index=0, id=0, db=file:hsqldb-file, alias=db1] opened sucessfully in 1093 ms.
+[Server@372f7a8d]: Startup sequence completed in 1104 ms.
+[Server@372f7a8d]: 2015-01-26 10:16:11.561 HSQLDB server 2.3.2 is online on port 9001
+[Server@372f7a8d]: To close normally, connect and execute SHUTDOWN SQL
+[Server@372f7a8d]: From command line, use [Ctrl]+[C] to abort abruptly
+[Server@372f7a8d]: Initiating shutdown sequence...
+[Server@372f7a8d]: Shutdown sequence completed in 110 ms.
+[Server@372f7a8d]: 2015-01-26 10:17:08.537 SHUTDOWN : System.exit() is called next

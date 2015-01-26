@@ -1,36 +1,45 @@
 ##Eclipse Dev  environment setup
 
-Java 7 (JDK7), Tomcat 7, Eclipse IDE for Java EE Developers Luna (4.4)
+Java 8 (JDK8), Tomcat 8, Eclipse IDE for Java EE Developers Luna (4.4)
 
-Web Server : Tomcat 7 or Jetty 9 (for local test run, no need to download jetty)
+Web Server : Tomcat 8 or Jetty 9 (for local test run, no need to download jetty)
 
 SQL database: DEV : HSQLDB, Prod: MySQL JDBC
 
 Build Tool : maven 3
 
 
-####Open elipse
+####Step 1: Open terminal to run command
+Go to command line and clone the project to local disk
+, then convert it to eclipse project so that it is easier to import it into eclipse)
+```bash
+$ git clone git@github.com:redstring/rswebapp.git
+$ cd rswebapp
+$ mvn eclipse:eclipse
+```
 
-####Step1: 
-File -> Import -> Git -> Projects from Git -> Clone from URI (Fill out all the details) -> Import as general project
+
+####Step2: Open Eclipse
+File -> Import -> Existing Projects into Workspace
 
 Make sure the Destination directory is not in your existing eclipse workspace
 
 Otherwise, you will see this Error “.. overlaps the location of another project..” when trying to create a new project
 
-####Step 2: 
-Go to command line and the project directory (convert it to eclipse project so that it is compatible to eclipse)
-```bash
-$ cd rswebapp
-$ mvn eclipse:eclipse
-```
+
 ####Step 3: 
+Right click your project, -> Configure -> Convert to Maven project
+
 Hit Refresh in eclipse
 
-####Step 4: 
-(Optional ) You might need to download apache Tomcat 7 and point the server to that folder
+Right click your projcet, -> Maven -> Update Project
 
-Window -> Preferences -> Server -> Server Runtime Environment -> Add -> Apache Tomcat 7 
+Right click pom.xml -> Maven Install
+
+####Step 4: 
+(Optional ) You might need to download apache Tomcat 8 and point the server to that folder
+
+Window -> Preferences -> Server -> Server Runtime Environment -> Add -> Apache Tomcat 8 
 
 Add in your local tomcat location as Tomcat server
 
@@ -38,7 +47,7 @@ Add in your local tomcat location as Tomcat server
 ####Step 5: 
 Right click project(rswebapp) -> Properties -> 
 
-  Project Facets -> Click Convert to facedted form... ->(select Dynamic Web Module 3.0, java 1.7) 
+  Project Facets -> Click Convert to facedted form... ->(select Dynamic Web Module 3.0, java 1.8) 
   
   Click Further configuration available -> Content directory set to "src/main/webapp"
 

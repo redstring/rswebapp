@@ -4,8 +4,8 @@
 	<groupId>com.redstringmatch</groupId>
 	<artifactId>rswebapp</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>rswebapp red string match Webapp</name>
+	<version>0.0.2-SNAPSHOT</version>
+	<name>iredstring.com Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<developers>
@@ -18,86 +18,120 @@
 			</roles>
 		</developer>
 	</developers>
-
 	<properties>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<!-- >org.springframework.version>3.2.12.RELEASE</org.springframework.version-->
-		<org.springframework.version>4.0.8.RELEASE</org.springframework.version>
+		<springframework.version>4.0.6.RELEASE</springframework.version>
+		<hibernate.version>4.3.7.Final</hibernate.version>
+		<joda-time.version>2.3</joda-time.version>
+
+		<mysql.connector.version>5.1.34</mysql.connector.version>
+
 		<org.hsqldb.hsqldb.version>2.3.2</org.hsqldb.hsqldb.version>
-		<org.hibernate.hibernate.version>4.3.7.Final</org.hibernate.hibernate.version>
-		<com.fasterxml.jackson2-version>2.4.0</com.fasterxml.jackson2-version>
-		<juni.junit.version>4.11</juni.junit.version>
-		<jdk.version>1.7</jdk.version>
-	</properties>
 
-	<profiles>
-		<profile>
-			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources/env_dev</directory>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-		<profile>
-			<id>prod</id>
-			<build>
-				<resources>
-					<resource>
-						<directory>src/main/resources/env_prod</directory>
-					</resource>
-				</resources>
-			</build>
-		</profile>
-	</profiles>
+		<com.fasterxml.jackson2-version>2.4.0</com.fasterxml.jackson2-version>
+
+	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${org.hsqldb.hsqldb.version}</version>
-		</dependency>
-		<!-- Hibernate is the implementation of JPA -->
-		<!-- It includes hibernate-core -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${org.hibernate.hibernate.version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
 		</dependency>
 
-
-		<!-- spring-core is already included in spring-context>dependency> <groupId>org.springframework</groupId> 
-			<artifactId>spring-core</artifactId> <version>${org.springframework.version}</version> 
-			</dependency -->
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${org.springframework.version}</version>
+			<artifactId>spring-core</artifactId>
+			<version>${springframework.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>${org.springframework.version}</version>
+			<artifactId>spring-web</artifactId>
+			<version>${springframework.version}</version>
 		</dependency>
-		<!-- spring-webmvc includes spring-web -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${org.springframework.version}</version>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${springframework.version}</version>
 		</dependency>
 
-		<!-- It's used when you run web server inside Eclipse -->
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- jsr303 validation -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.1.2.Final</version>
+		</dependency>
+
+		<!-- Joda-Time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
+		</dependency>
+
+		<!-- To map JodaTime with database type -->
+		<dependency>
+			<groupId>org.jadira.usertype</groupId>
+			<artifactId>usertype.core</artifactId>
+			<version>3.0.0.CR1</version>
+		</dependency>
+
+		<!-- Servlet+JSP+JSTL -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- HSQLdb -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${org.hsqldb.hsqldb.version}</version>
 		</dependency>
 
 		<!-- the core, which includes Streaming API, shared low-level abstractions 
@@ -123,57 +157,35 @@
 			<version>${com.fasterxml.jackson2-version}</version>
 		</dependency>
 
-		<!-- dependency> <groupId>com.github.fge</groupId> <artifactId>json-schema-validator</artifactId> 
-			<version>your-version-here</version> </dependency -->
-
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${juni.junit.version}</version>
-			<scope>test</scope>
-		</dependency>
+	
 
 	</dependencies>
+
 	<build>
-		<finalName>rswebapp</finalName>
-
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.5</version>
-			</plugin>
-			<plugin>
-				<!-- To be run with simple command "mvn jetty:run" -->
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<!-- >version>9.0.5.v20130815</version-->
-				<version>9.0.7.v20131107</version>
-				<configuration>
-					<scanIntervalSeconds>0</scanIntervalSeconds>
-					<jettyXml>jetty/jetty-webapp.xml</jettyXml>
-					<webApp>
-						<extraClasspath>${basedir}/jetty/classpath</extraClasspath>
-					</webApp>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.hsqldb</groupId>
-						<artifactId>hsqldb</artifactId>
-						<version>${org.hsqldb.hsqldb.version}</version>
-						<scope>runtime</scope>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+						<warName>SpringHibernateExample</warName>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<finalName>SpringMVCHibernateExample</finalName>
 	</build>
 </project>
+
