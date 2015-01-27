@@ -4,13 +4,11 @@ rswebapp
 RedString Matching service backend webapp
 
 
-Java 7 (JDK7), Tomcat 7, Eclipse IDE for Java EE Developers Luna (4.4)
+Java 8 (JDK8), Tomcat 8, Eclipse IDE for Java EE Developers Luna (4.4)
 
-Web Server : Tomcat 7
+Web Server : Tomcat 8
 
-SQL database: DEV : HSQLDB in memory
-
-Eclipse DEV environment setup: TBD
+SQL database: MySQL or HSQLDB in file
 
 
 To build a war file for development environment, using
@@ -18,17 +16,15 @@ To build a war file for development environment, using
 mvn clean install
 ```
 
-TBD: To package a war file for production environment, using 
-```bash
-mvn clean install -Pprod
-```
 
 To run the webapp via maven command line (No Tomcat needed)
 ```bash
-mvn jetty:run
+./run.sh
 ```
 
 To deploy it to Tomcat server
 Copy the rswebapp.war to Tomcat webapps folder
 Or
 Copy the target/rswebapp folder to Tomcat webapps folder
+Or in AWS BeansTalk
+Upload rswebapp.war
