@@ -23,7 +23,7 @@ public class HelloController {
 	public String hello(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 			Model model) {
-		model.addAttribute("name", "1. Hello, "+name);
+		model.addAttribute("strvalue", "1. Hello, "+name);
 		return "plaintext";
 	}
 
@@ -32,7 +32,7 @@ public class HelloController {
 	public String hello2(
 			@RequestParam(value = "name", required = false, defaultValue = "World2") String name,
 			Model model) {
-		model.addAttribute("name", "2. Hello, "+name);
+		model.addAttribute("strvalue", "2. Hello, "+name);
 		return "plaintext";
 	}
 
@@ -43,7 +43,7 @@ public class HelloController {
 		String message = "<br><div align='center'>" + "<h3>3. Hello ** Welcome :"
 				+ name + "</h3> </div> <br /> <br />";
 
-		model.addAttribute("name", message);
+		model.addAttribute("strvalue", message);
 		return "plaintext";
 	}
 

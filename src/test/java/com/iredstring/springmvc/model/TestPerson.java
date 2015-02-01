@@ -1,4 +1,4 @@
-package com.iredstring.springmvc;
+package com.iredstring.springmvc.model;
 
 import java.io.IOException;
 import java.util.List;

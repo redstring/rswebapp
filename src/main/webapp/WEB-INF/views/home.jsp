@@ -16,19 +16,20 @@
 		<br /> 
 		List of ways to route requests <br /> <br /> 
 		
-		<a href="${pageContext.request.contextPath}/api/hello">api/hello</a><br />
-		<a href="${pageContext.request.contextPath}/api/hello2?name=test_name">api/hello2?name=test_name</a><br />
-		<a href="${pageContext.request.contextPath}/api/hello3/atest">***Broken, not working***|||api/hello3/atest</a><br />	
-
-		<a href="${pageContext.request.contextPath}/api/emp/list">api/emp/list</a><br /> 
-		
-		
-		<a href="${pageContext.request.contextPath}/api/v1/person/list">api-v1-person-list</a><br /> 
-		<a href="${pageContext.request.contextPath}/api/v1/person?username=peter_sagan">person-peter</a><br /> 
-		<a href="${pageContext.request.contextPath}/api/v1/person/read/nasta">person-nasta</a><br /> 
-		<a href="${pageContext.request.contextPath}/api/v1/user/irs_id/3">Leon</a><br /> 
+				
+		<a href="${pageContext.request.contextPath}/api/v1/rsuser/list">api-v1-rsuser-list</a><br /> 
+        <a href="${pageContext.request.contextPath}/api/v1/rsuser/read?rsid=3">Leon</a><br /> 
+		<a href="${pageContext.request.contextPath}/api/v1/rsuser/read?username=peter_sagan">person-peter</a><br /> 
 
 
+        <hr/>
+        <a href="${pageContext.request.contextPath}/api/hello">api/hello</a><br />
+        <a href="${pageContext.request.contextPath}/api/hello2?name=test_name">api/hello2?name=test_name</a><br />
+        <a href="${pageContext.request.contextPath}/api/hello3/atest">***Broken, not working***|||api/hello3/atest</a><br />    
+
+        <a href="${pageContext.request.contextPath}/api/emp/list">api/emp/list</a><br /> 
+        
+    
 	</p>
 
 </body>

@@ -29,7 +29,7 @@
         </p>
       </div>
 
-      
+</div> <!-- /container -->      
 
 <jsp:include page="footer.jsp" />
       

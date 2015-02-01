@@ -150,5 +150,6 @@ If you have any questions or concerns regarding privacy on our Website, please s
 Effective Date: January 1, 2015
 <br/><br/>
 
+</div> <!-- /container -->
 
 <jsp:include page="footer.jsp" />

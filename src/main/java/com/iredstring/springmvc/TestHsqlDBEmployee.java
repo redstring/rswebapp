@@ -13,13 +13,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.iredstring.springmvc.model.Employee;
 import com.iredstring.springmvc.service.EmployeeService;
 
-public class TestHsqlDB {
+public class TestHsqlDBEmployee {
 
 	static EmployeeService service;
 
 	public static void main(String[] args) {
 
-		//setupHsqlDB();
+		setupHsqlDB();
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.scan("com.iredstring.springmvc");
@@ -27,7 +27,7 @@ public class TestHsqlDB {
 
 		service = (EmployeeService) context.getBean("employeeService");
 		
-		//createEmployeesInDB();
+		createEmployeesInDB();
 
 		for(Employee e : service.findAllEmployees()){
 			System.out.println(e);
@@ -38,12 +38,12 @@ public class TestHsqlDB {
 		
 	}
 
-	private static void setupHsqlDB() {
+	public static void setupHsqlDB() {
 		Connection c = null;
 		try {
 			Class.forName("org.hsqldb.jdbcDriver");
-			//c = DriverManager.getConnection("jdbc:hsqldb:mem:hsqldb/mymemdb", "sa", "");
-			c = DriverManager.getConnection("jdbc:hsqldb:file:hsqldb/hsqldb-file;shutdown=true;hsqldb.write_delay=false;", "sa", "");
+			c = DriverManager.getConnection("jdbc:hsqldb:mem:mymemdb", "sa", "");
+			//c = DriverManager.getConnection("jdbc:hsqldb:file:hsqldb/hsqldb-file;shutdown=true;hsqldb.write_delay=false;", "sa", "");
 
 			Statement s = c.createStatement();
 			String sql = "CREATE TABLE EMPLOYEE(" 
@@ -70,7 +70,7 @@ public class TestHsqlDB {
 
 	
 	
-	private static void createEmployeesInDB() {
+	public static void createEmployeesInDB() {
 
 		Employee peter = new Employee();
 		peter.setName("peter");

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import com.iredstring.springmvc.dao.PersonDao;
-import com.iredstring.springmvc.model.Employee;
 import com.iredstring.springmvc.model.Person;
 
 import org.springframework.beans.factory.annotation.Autowired;

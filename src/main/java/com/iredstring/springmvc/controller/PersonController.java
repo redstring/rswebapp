@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.iredstring.springmvc.model.Employee;
 import com.iredstring.springmvc.model.Person;
 import com.iredstring.springmvc.service.EmployeeService;
 import com.iredstring.springmvc.service.PersonService;

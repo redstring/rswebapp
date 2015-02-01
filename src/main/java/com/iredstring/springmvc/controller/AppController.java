@@ -1,18 +1,14 @@
 package com.iredstring.springmvc.controller;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
 
-import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,22 +30,6 @@ public class AppController {
 	public String listEmployees(ModelMap model) {
 
 		List<Employee> employees = service.findAllEmployees();
-//		Employee peter = new Employee();
-//		peter.setName("peter");
-//		peter.setJoiningDate(new LocalDate("2010-01-11"));
-//		peter.setSalary(new BigDecimal("101000"));
-//		peter.setSsn("ssn1");
-//
-//		Employee nancy = new Employee();
-//		nancy.setName("nancy");
-//		nancy.setJoiningDate(new LocalDate("2010-02-13"));
-//		nancy.setSalary(new BigDecimal("102000"));
-//		nancy.setSsn("ssn2");
-//		
-//		List<Employee>employees = new ArrayList<Employee>();
-//		employees.add(peter);
-//		employees.add(nancy);
-		
 		model.addAttribute("employees", employees);
 		return "allemployees";
 	}

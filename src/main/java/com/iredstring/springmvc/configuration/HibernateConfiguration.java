@@ -16,6 +16,8 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.iredstring.springmvc.TestHsqlDBEmployee;
+
 @Configuration
 @EnableTransactionManagement
 @ComponentScan({ "com.iredstring.springmvc.configuration" })
@@ -26,16 +28,7 @@ public class HibernateConfiguration {
     @Autowired
     private Environment environment;
 
-    @Bean
-    @Autowired
-    public LocalSessionFactoryBean sessionFactory() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.iredstring.springmvc.model" });
-        sessionFactory.setHibernateProperties(hibernateProperties());
-        return sessionFactory;
-     }
-	
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -53,6 +46,17 @@ public class HibernateConfiguration {
         properties.put("hibernate.format_sql", environment.getRequiredProperty("hibernate.format_sql"));
         return properties;        
     }
+    
+    @Bean
+    @Autowired
+    public LocalSessionFactoryBean sessionFactory() {
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+        sessionFactory.setDataSource(dataSource());
+        sessionFactory.setPackagesToScan(new String[] { "com.iredstring.springmvc.model" });
+        sessionFactory.setHibernateProperties(hibernateProperties());
+        return sessionFactory;
+     }
+	
     
 	@Bean
     @Autowired

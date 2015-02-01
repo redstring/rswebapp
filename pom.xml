@@ -31,7 +31,7 @@
 
 		<org.hsqldb.hsqldb.version>2.3.2</org.hsqldb.hsqldb.version>
 
-		<com.fasterxml.jackson2-version>2.4.0</com.fasterxml.jackson2-version>
+		<com.fasterxml.jackson2-version>2.4.4</com.fasterxml.jackson2-version>
 
 	</properties>
 
